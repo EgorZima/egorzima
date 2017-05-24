@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Workout Details
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <strong> {{workout.title}} </strong>
+        </ion-card-header>
+        <ion-card-content>
+            <p> <strong> Note: </strong> {{workout.note}} </p>
+            <hr>
+            {{workout.note}}
+            <br>
+            <button ion-button color="danger" block (click)="deleteWorkout(workout._id.$oid)">Delete Workout</button>  
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

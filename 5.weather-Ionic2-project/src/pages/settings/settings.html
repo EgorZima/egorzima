@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-100>
+          <ion-list>
+            <ion-item>
+              <ion-label fixed>Default City</ion-label>
+              <ion-input type="text" [(ngModel)]="search" (keyup)="getQuery()"></ion-input>
+            </ion-item>
+            <p class="current"> Current: {{defaultCity}} </p>
+          
+          <button (click)="saveChanges()" ion-button full>  Save Changes </button>
+        </ion-list>
+
+        <ion-list>
+          <ion-item *ngFor="let result of results" (click)="setDefaultCity(result)" class="weather-item">
+            {{result.name}}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

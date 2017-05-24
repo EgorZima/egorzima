@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Workouts
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<h2> Add workout </h2>
+
+<form (submit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Title</ion-label>
+        <ion-input [(ngModel)]="title" name="title" type="text" value=""> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Note</ion-label>
+        <ion-input [(ngModel)]="note" type="textarea" name="note" value=""> </ion-input>
+      </ion-item>
+    
+    
+      <ion-item>
+        <ion-label fixed>Type</ion-label>
+          <ion-select [(ngModel)]="type" name="type">
+            <ion-option value="Jogging">Jogging</ion-option>
+            <ion-option value="Swimming">Swimming</ion-option>
+            <ion-option value="Push ups">Push ups</ion-option>
+            <ion-option value="Boxing">Boxing</ion-option>
+            <ion-option value="Aerobics">Aerobics</ion-option>
+            <ion-option value="Yoga">Yoga</ion-option>
+          </ion-select>
+       </ion-item>
+
+       <ion-item>
+          <button type="submit" ion-button color="primary" block> Add Workout</button>
+       </ion-item>
+    </ion-list>
+
+</form>
+</ion-content>

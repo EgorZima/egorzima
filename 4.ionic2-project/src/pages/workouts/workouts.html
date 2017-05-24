@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Workouts
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="workouts">
+<h1> Workouts </h1>
+<ion-list>
+    <ion-item *ngFor="let workout of workouts" (click)="workoutSelected($event, workout)" class="workout">
+      {{workout.title}}
+    </ion-item>
+</ion-list>
+</ion-content>

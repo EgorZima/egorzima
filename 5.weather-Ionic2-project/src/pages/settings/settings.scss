@@ -1,0 +1,14 @@
+ion-content {
+    background: linear-gradient(to bottom, #333b5b 11%,#536096 100%);
+    color: #f2f2f2;
+}
+
+.current{
+    color: #f2f2f2;
+    font-size: 20px;
+}
+
+.weather-item:hover {
+    cursor: pointer;
+    background: #000;
+}
